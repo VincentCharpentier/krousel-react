@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/VincentCharpentier/krousel-react#readme",
   "peerDependencies": {
-    "krousel": "^0.0.1"
+    "krousel": "^0.0.1",
+    "react": "^16.8.0"
   }
 }
