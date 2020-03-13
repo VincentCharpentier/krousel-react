@@ -2,10 +2,16 @@
   "name": "krousel-react",
   "version": "0.0.1",
   "description": "React wrapper for krousel",
-  "main": "index.js",
+  "main": "dist/krousel-react.cjs.js",
+  "jsnext:main": "dist/krousel-react.es.js",
+  "module": "dist/krousel-react.es.js",
   "scripts": {
+    "build:es": "rollup --config rollup.config.js --environment FORMAT:es",
+    "build:umd": "rollup --config rollup.config.js --environment FORMAT:umd",
+    "build:cjs": "rollup --config rollup.config.js --environment FORMAT:cjs",
     "prettier": "prettier --write src/*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "rollup --config rollup.config.js --environment FORMAT:cjs --watch"
   },
   "repository": {
     "type": "git",
@@ -28,6 +34,18 @@
     "react": "^16.8.0"
   },
   "devDependencies": {
-    "prettier": "1.19.1"
+    "@babel/core": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-transform-runtime": "7.8.3",
+    "@babel/preset-env": "7.8.7",
+    "@babel/preset-react": "7.8.3",
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-json": "4.0.2",
+    "@rollup/plugin-node-resolve": "7.1.1",
+    "@rollup/plugin-replace": "2.3.1",
+    "prettier": "1.19.1",
+    "rollup": "2.0.6",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-uglify": "6.0.4"
   }
 }
