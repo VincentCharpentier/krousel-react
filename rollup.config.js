@@ -2,8 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
-import { uglify } from 'rollup-plugin-uglify';
 import replace from '@rollup/plugin-replace';
+import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
 const makeExternalPredicate = (externalArr) => {
@@ -78,6 +78,6 @@ export default {
           ),
         })
       : null,
-    minify ? uglify() : null,
+    minify ? terser() : null,
   ].filter(Boolean),
 };

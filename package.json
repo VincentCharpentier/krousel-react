@@ -6,12 +6,12 @@
   "jsnext:main": "dist/krousel-react.es.js",
   "module": "dist/krousel-react.es.js",
   "scripts": {
-    "build:es": "rollup --config rollup.config.js --environment FORMAT:es",
-    "build:umd": "rollup --config rollup.config.js --environment FORMAT:umd",
-    "build:cjs": "rollup --config rollup.config.js --environment FORMAT:cjs",
+    "build:es": "rollup --config --environment MINIFY,FORMAT:es",
+    "build:umd": "rollup --config --environment MINIFY,FORMAT:umd",
+    "build:cjs": "rollup --config --environment MINIFY,FORMAT:cjs",
     "prettier": "prettier --write src/*",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "rollup --config rollup.config.js --environment FORMAT:cjs --watch"
+    "watch": "rollup --config --environment FORMAT:es --watch"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/VincentCharpentier/krousel-react#readme",
   "peerDependencies": {
-    "krousel": "^0.0.1",
+    "krousel": "^0.1.0",
     "react": "^16.8.0"
   },
   "devDependencies": {
@@ -43,9 +43,10 @@
     "@rollup/plugin-json": "4.0.2",
     "@rollup/plugin-node-resolve": "7.1.1",
     "@rollup/plugin-replace": "2.3.1",
+    "krousel": "0.1.0",
     "prettier": "1.19.1",
-    "rollup": "2.0.6",
+    "rollup": "1.32.1",
     "rollup-plugin-babel": "4.4.0",
-    "rollup-plugin-uglify": "6.0.4"
+    "rollup-plugin-terser": "5.3.0"
   }
 }

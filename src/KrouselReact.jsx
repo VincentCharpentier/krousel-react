@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import Krousel from 'krousel';
+import React from 'react';
+const { useEffect, useRef } = React;
 
 const KrouselReact = (props) => {
   const { className, children, style, ...options } = props;
