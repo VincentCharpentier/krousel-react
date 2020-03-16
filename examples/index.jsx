@@ -21,8 +21,8 @@ const makeChildren = (count) => {
 
 const App = () => (
   <div>
-    {EXAMPLES.map(({ name, count, description, className, ...options }) => (
-      <section className={className}>
+    {EXAMPLES.map(({ name, count, description, className, ...options }, i) => (
+      <section key={i.toString()} className={className}>
         <h1>{name}</h1>
         {description && <p>{description}</p>}
         <pre>
