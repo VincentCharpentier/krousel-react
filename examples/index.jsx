@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'krousel/dist/krousel.css';
-import KrouselReact from '..';
+import Krousel from '..';
 import './common.scss';
 import './theme.scss';
 
@@ -28,9 +28,9 @@ const App = () => (
         <pre>
           const options = {JSON.stringify(options, null, 2)}
           {'\n\n'}// ... {'\n\n'}
-          {`<KrouselReact {...options}>`}
+          {`<Krousel {...options}>`}
         </pre>
-        <KrouselReact {...options}>{makeChildren(count)}</KrouselReact>
+        <Krousel {...options}>{makeChildren(count)}</Krousel>
       </section>
     ))}
   </div>
