@@ -1,0 +1,5 @@
+$slow-speed: 1s;
+
+.slow :global(.k-slide) {
+  transition: opacity $slow-speed ease-in-out;
+}
