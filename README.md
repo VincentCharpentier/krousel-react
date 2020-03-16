@@ -2,6 +2,8 @@
 
 React wrapper for [krousel](https://github.com/VincentCharpentier/krousel/) - a javascript carousel library
 
+[Check the demo here](https://vincentcharpentier.github.io/krousel-react/)
+
 ## Installation
 
 ```bash
