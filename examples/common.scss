@@ -27,3 +27,51 @@ pre {
   box-shadow: 0 0 6px 4px inset rgba(0, 0, 0, .2);
   overflow: auto;
 }
+
+.customArrows {
+  $margin: 10px;
+  margin-top: $margin;
+
+  h3 {
+    margin: 0;
+  }
+
+  .customArrow {
+    background: rgba(#000, .4);
+    color: #FFF;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    &:before {
+      content: '';
+    }
+  }
+
+  :global {
+    .k-dots {
+      margin-top: $margin;
+    }
+  }
+}
+
+.customDots {
+  :global {
+    .k-dots {
+      width: fit-content;
+      margin: 0 auto;
+      background: white;
+      border-radius: 5px;
+    }
+    .k-dot {
+      border-radius: 0; // square
+      background: red;
+      opacity: .2;
+    }
+    .k-dot.k-current {
+      // current dot
+      opacity: 1;
+    }
+  }
+}

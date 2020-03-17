@@ -9,6 +9,9 @@ module.exports = {
     path: path.resolve(__dirname, '../docs'),
     publicPath: './',
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
@@ -21,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|krousel\/dist)/,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -37,7 +40,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: /node_modules/,
+        include: /(node_modules|krousel\/dist)/,
         use: [
           MiniCssExtractPlugin.loader,
           {
