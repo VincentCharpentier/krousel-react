@@ -42,3 +42,5 @@ import Krousel from 'krousel-react';
 ```
 
 You can find the list of options [here](https://github.com/VincentCharpentier/krousel#options)
+
+To customize arrows you can also provide a React component instance to `prevArrow` and `nextArrow` options (see examples)
