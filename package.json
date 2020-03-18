@@ -1,11 +1,12 @@
 {
   "name": "krousel-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React wrapper for krousel",
   "main": "dist/krousel-react.cjs.js",
   "jsnext:main": "dist/krousel-react.es.js",
   "module": "dist/krousel-react.es.js",
   "scripts": {
+    "build": "npm run build:es & npm run build:umd & npm run build:cjs",
     "build:es": "rollup --config --environment MINIFY,FORMAT:es",
     "build:umd": "rollup --config --environment MINIFY,FORMAT:umd",
     "build:cjs": "rollup --config --environment MINIFY,FORMAT:cjs",
