@@ -14,7 +14,6 @@ module.exports = {
     '.npmrc',
     '.prettierrc',
     '_config.yml',
-    'README.md',
     'rollup.config.js',
   ],
   packageManager: 'npm',
