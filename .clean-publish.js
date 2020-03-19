@@ -14,6 +14,7 @@ module.exports = {
     '.npmrc',
     '.prettierrc',
     '_config.yml',
+    'npm-shrinkwrap.json',
     'rollup.config.js',
   ],
   packageManager: 'npm',
