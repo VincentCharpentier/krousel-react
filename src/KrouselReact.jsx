@@ -20,6 +20,7 @@ const KrouselReact = (props) => {
         {
           _forceAppendPrevArrow: React.isValidElement(options.prevArrow),
           _forceAppendNextArrow: React.isValidElement(options.nextArrow),
+          appendArrows: target.current,
         },
         options,
         {
